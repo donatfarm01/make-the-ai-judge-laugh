@@ -23,4 +23,9 @@ the LICENSE carries the SPDX identifier line the kit check requires.
 
 The program was run locally and the produced entry file was checked: one line,
 169 characters, valid UTF-8, no trailing newline. The kit check was run from
-the unpacked kit against this repository and passed.
+the unpacked kit against this repository and the builder bundle: 13 passed,
+1 failed, 5 skipped, 5 checked at submission. The single failure is
+thinking_priced — zero usage rows, because a subagent's usage row is written
+only once its run completes. The parent attaches the usage rows from the
+database, re-bundles, and re-checks. thinking_reproduces scored 94.2 percent
+(49 of 52 counted lines authored), well above the 30 percent bar.
